@@ -7,17 +7,9 @@ export default Route.extend({
 
   model: function() {
     return Promise.all([
-      this.get('ajax').request("https://data.smartdublin.ie/cgi-bin/rtpi/routelistinformation?operator=bac")
+      this.get('ajax').request("https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=493&routeid=120&operator=bac")
     ]).then((res) => {
       return res[0].results;
     });
-  },
-
-
-  afterModel(model) {
-    let controller = this.controllerFor('bus-route');
-    controller.set('filteredRoute', model);
-    return true; 
   }
-
 });

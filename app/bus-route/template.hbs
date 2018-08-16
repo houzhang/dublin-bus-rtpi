@@ -1,5 +1,7 @@
-<ul>
-  {{#each model as |busRoute|}}
-    <li>Operator: {{busRoute.operator}}, route: {{busRoute.route}}</li>
-  {{/each}}
-</ul>
+<div class="form-inline">
+  <label class="mr-sm-2">Search Route:</label>
+  {{input type="text" class="form-control" value=searchRoute}}  
+</div>
+
+{{route-list busRoutes=filteredRoute}}
+
