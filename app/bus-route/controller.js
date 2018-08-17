@@ -4,7 +4,11 @@ import { isBlank } from '@ember/utils';
 
 export default Controller.extend({
   searchRoute: "",
-  filteredRoute: [],
+  
+  init() {
+    this._super(...arguments);
+    this.filteredRoute = [];
+  },
 
   filterRouteChanged: observer('searchRoute', function() {
     const result = this.model.filter(busRoute => busRoute.route.startsWith(this.searchRoute));
