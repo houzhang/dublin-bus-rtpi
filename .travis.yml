@@ -32,3 +32,4 @@ deploy:
   provider: firebase
   token:
     secure: "1/d-8wkb03KIg_Xa-rE-_L79Or345hi5dHB5PaIw4lrE0"
+  project: "dublin-bus-rtpi"
