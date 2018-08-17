@@ -8,7 +8,6 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('bus-route');
-  this.route('timetable');
 });
 
 export default Router;
