@@ -13,10 +13,10 @@ export default Route.extend({
     });
   },
 
-
   afterModel(model) {
     let controller = this.controllerFor('bus-route');
-    controller.set('filteredRoute', model);
+    controller.set('filteredRoute', model); 
+    controller.set('searchRoute', '');
     return true; 
   }
 

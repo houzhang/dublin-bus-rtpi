@@ -1,5 +1,5 @@
 <div class="list-group">
   {{#each busRoutes as |busRoute|}}
-    <a href="#" class="list-group-item list-group-item-action">{{busRoute.route}}</a>
+    {{#link-to "bus-route-detail" (query-params route=busRoute.route) class="list-group-item list-group-item-action"}}{{busRoute.route}}{{/link-to}}
   {{/each}}
 </div>

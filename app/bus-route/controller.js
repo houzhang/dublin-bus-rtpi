@@ -11,7 +11,7 @@ export default Controller.extend({
   },
 
   filterRouteChanged: observer('searchRoute', function() {
-    const result = this.model.filter(busRoute => busRoute.route.startsWith(this.searchRoute));
+    const result = this.model.filter(busRoute => busRoute.route.startsWith(this.searchRoute.toUpperCase()));
     if(isBlank(this.searchRoute)) {
       this.set('filteredRoute', this.model)
     } else {
