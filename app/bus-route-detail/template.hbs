@@ -12,7 +12,7 @@
             <div class="card-body">
               <div class="list-group">
                 {{#each busRouteDetail.stops as |stop|}}
-                  <a href="#" class="list-group-item list-group-item-action">{{stop.stopid}}: {{stop.fullname}}</a>
+                  {{#link-to "bus-real-time" (query-params route=route stopId=stop.stopid) class="list-group-item list-group-item-action"}}{{stop.stopid}}: {{stop.fullname}}{{/link-to}}
                 {{/each}}
               </div>
             </div>
