@@ -6,6 +6,7 @@ export default Route.extend({
   ajax: inject('ajax'),
 
   model: function() {
+    this.store.findAll('route-list-information').then(res => { res })
     return Promise.all([
       this.get('ajax').request("https://data.smartdublin.ie/cgi-bin/rtpi/routelistinformation?operator=bac")
     ]).then((res) => {

@@ -1,5 +1,9 @@
 <ul class="list-group">
-  {{#each model as |realTime|}}
-    <li class="list-group-item">Arrival time: {{realTime.arrivaldatetime}}</li>
-  {{/each}}
+  {{#if model}}
+    {{#each model as |realTime|}}
+      <li class="list-group-item">Arrival time: {{realTime.arrivaldatetime}}</li>
+    {{/each}}
+  {{else}}
+    Sorry, Real Time Information is currently unavailable for this bus stop.
+  {{/if}}
 </ul>

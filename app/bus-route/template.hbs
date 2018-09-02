@@ -1,6 +1,9 @@
 <div class="form-inline">
   <label class="mr-sm-2">Search by route:</label>
   {{input type="text" class="form-control" value=searchRoute}}  
+  <label class="mr-sm-2">Stop ID:</label>
+  {{input type="text" class="form-control" value=stopId}}  
+  <button class="btn btn-primary">Get Real Time</button>
 </div>
 
 {{route-list busRoutes=filteredRoute}}
