@@ -11,7 +11,7 @@
           <div id="collapse{{index}}" class="collapse" data-parent="#accordion">
             <div class="card-body">
               <div class="list-group">
-                {{#each busRouteDetail.stops as |stop|}}
+                {{#each busRouteDetail.stop as |stop|}}
                   {{#link-to "bus-real-time" (query-params route=route stopId=stop.stopid) class="list-group-item list-group-item-action"}}{{stop.stopid}}: {{stop.fullname}}{{/link-to}}
                 {{/each}}
               </div>

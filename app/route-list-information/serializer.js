@@ -6,6 +6,7 @@ export default DS.RESTSerializer.extend({
     if (payload.errorcode == 0) {
       payload.results.forEach(element => {
         element.id = element.operator + "_" + element.route
+        element.stop = element.stops
       });
   
       payload.routeListInformation = payload.results
