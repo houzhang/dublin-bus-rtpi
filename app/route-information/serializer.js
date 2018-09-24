@@ -7,9 +7,5 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 
   extractId(modelClass, resourceHash) {
     return resourceHash.origin + '_' + resourceHash.destination;
-  },
-
-  extractRelationship(modelClass, resourceHash) {
-    return resourceHash;
   }
 });
